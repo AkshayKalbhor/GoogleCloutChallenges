@@ -1,0 +1,6 @@
+Your goals for solving this challenge are as follows:
+
+1: Create a log-based metric for the Logging app named [Logging] .
+2: Create a log-based metric for the Crashing app named [CrashingMetric] .
+3: Create an alert for the Crashing metric called [CrashAlert] . You should use the sum operation with a threshold of 1 to ensure the alert fires as quickly as possible.
+4: Once an alert has fired, respond to the alert by acknowledging the alert incident in Google Cloud console.

@@ -1,0 +1,54 @@
+1: Open the cloud console.
+
+Find the log filter:
+textPayload="Logging Application"
+
+2: Go to Logging -> Logs-based Metrics
+3: Create Logging Metric
+    Click on `Create Metric` 
+    Metric Type : Counter
+    Details :
+        Log Metric Name : Logging
+        Description: log-based metric for the Logging app
+        Units : 1
+    Filter Section: 
+        Filter : textPayload="Logging Application"
+    Click on "Create Metric"
+
+4: Create Crashing Metric with similar steps as in 3
+    Click on `Create Metric` 
+    Metric Type : Counter
+    Details :
+        Log Metric Name : CrashingMetric
+        Description: log-based metric for the Crashing app
+        Units : 1
+    Filter Section: 
+        Filter : textPayload="Crashing application"
+    Click on "Create Metric"
+
+5: Alert Creation:
+    Go to Log-based Metrics to view the list of created metrics.
+    Select the "hamBurger icon"/ 3 dots /More Actions icon  in front of the created "CrashingMetric"
+    Select "Create alert from metric"
+   
+    Rolling window : 5 min
+    Rolling window function (Operation): Sum
+    Threshold: 1
+    Next
+
+    Disable "Use notification channel"
+    Documentation: Alert triggered for Crashing App, follow XXXXX doc for resolution.
+    Name the alert policy (Alert Policy Name): CrashAlert
+    Next 
+
+    Click on "Create Policy"
+
+6: Check if Alert has fired.
+    Goto Alerting which can be found on the left menu.
+    wait for sometime
+    Go to alerting check incident 
+    click on Acknowledge incident
+    Check challenge status.
+
+
+Assessment : "Check My Progress"
