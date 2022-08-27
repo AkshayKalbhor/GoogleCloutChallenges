@@ -1,0 +1,16 @@
+{
+  "tables": [
+    {
+      "table_name": "StarShips",
+      "file_patterns": [
+        "gs://startrek-wqg9g/startrek.csv"
+      ],
+      "columns": [
+        {"column_name": "ShipName", "type_name": "STRING"},
+        {"column_name": "Registry", "type_name": "STRING"},
+        {"column_name": "ShipClass", "type_name": "STRING"},
+        {"column_name": "Description", "type_name": "STRING"}
+      ]
+    }
+  ]
+}
