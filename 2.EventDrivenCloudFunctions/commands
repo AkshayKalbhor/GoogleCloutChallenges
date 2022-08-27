@@ -1,0 +1,22 @@
+gsutil mb -p qwiklabs-gcp-04-06ce5dfee4ec gs://hot-bucket-vtu7m
+
+
+Storage Bucket: gs://cloud-training/clout/event-driven-functions
+Folder: source
+
+Command >>
+gsutil cp gs://cloud-training/clout/event-driven-functions/source .
+
+Create the cloud function
+Command >>
+gcloud functions deploy hello_gcs_ak_function \
+--runtime python310 \
+--trigger-resource hot-bucket-vtu7m \
+--trigger-event google.storage.object.finalize
+
+
+Trigger event : google.storage.object.finalize
+
+Verify the file.
+cloud_fn_output.json
+
